@@ -1,0 +1,17 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+{% block content %}
+<form>
+    {% csrf_token %}
+    <input type="hidden" id="todo_id" value="{{ todo.id }}" />
+    <div class="form-group">
+        <label>Task : </label>
+        <input type="text" id="task" value="{{ todo.task }}" required="required" />
+    </div>
+
+    <div class="form-group">
+        <button type="button" id="update" class="btn btn-sm btn-warning">Update</button>
+    </div>
+</form>
+{% endblock %}

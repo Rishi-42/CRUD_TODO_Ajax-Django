@@ -1,0 +1,18 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+{% block content %}
+<form class="form-inline">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>Task : </label>
+        <input type="text" id="task" class="form-control" style="width:75%;" required="required" />
+        <br><br>
+        <button type="button" id="create" class="btn btn-sm btn-primary">Create</button>
+    </div>
+</form>
+<br>
+<div id="result">
+
+</div>
+{% endblock %}
